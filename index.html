@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+Code by  : Shahid Dhariwala
+LinkedIn : https://www.linkedin.com/in/shahiddhariwala/
+Twitter  : https://twitter.com/shahiddhariwala
+Date     : 18-May-2020
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iftar Time</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!--pure origin  -->
+    <style>
+        html {
+            font-size: 80%;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 6rem 4rem 10rem;
+            line-height: 2.7;
+            font-family: "Nunito Sans", sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+        }
+
+        .center-align {
+            text-align: center;
+            margin-left: auto;
+            margin-top: auto;
+        }
+
+        /* footer */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5%;
+            background: linear-gradient(to right, #4ca2cd, #67b26f);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .dua {
+            background: linear-gradient(to right, #006b00, #99fcba);
+        }
+
+        b {
+            color: rgb(2, 59, 40);
+        }
+
+        td.dua {
+            text-align: center;
+        }
+
+        h1 {
+            color: #396;
+            font-weight: 100;
+            font-size: 20px;
+            margin: 20px 0px 10px;
+            text-align: center;
+        }
+
+        #clockdiv {
+            font-family: sans-serif;
+            color: #fff;
+            display: inline-block;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #clockdiv>div {
+            padding: 10px;
+            border-radius: 3px;
+            background: #00BF96;
+            display: inline-block;
+        }
+
+        #clockdiv div>span {
+            padding: 15px;
+            border-radius: 3px;
+            background: #00816A;
+            display: inline-block;
+        }
+
+        smalltext {
+            padding-top: 5px;
+            font-size: 8px;
+        }
+
+        .timer {
+            text-align: center;
+            background-color: rgb(160, 109, 42);
+        }
+    </style>
+  
+</head>
+
+<body>
+
+
+
+    <table class="pure-table pure-table-horizontal" style="margin: auto;">
+        <thead>
+            <tr>
+                <td colspan="4" style="font-size: x-large;
+                font-weight: bold;
+                text-align: center;
+                color: rgb(5, 119, 119);
+                background: linear-gradient(to right, #006b00, #99fcba);" id="alertHead">Mumbai Ramadan</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>Ramadan</th>
+                <th>Iftar</th>
+                <th>Saheri</th>
+            </tr>
+            <tr>
+                <td class="timer" colspan="4">
+                    <h1>Countdown</h1>
+                    <div id="clockdiv">
+                        <div>
+                            <span class="hours" id="hour"></span>
+                            <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                            <span class="minutes" id="minute"></span>
+                            <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                            <span class="seconds" id="second"></span>
+                            <div class="smalltext">Seconds</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="pure-table-odd">
+                <td>18</td>
+                <td>24</td>
+                <td id="may-18">7:11 PM</td>
+                <td>4:33 AM</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>25</td>
+                <td id="may-19">7:11 PM</td>
+                <td>4:32 AM</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>20</td>
+                <td>26</td>
+                <td id="may-20">7:12 PM</td>
+                <td>4:32 AM</td>
+            </tr>
+            <tr id="may-21">
+                <td>21</td>
+                <td>27</td>
+                <td id="may-21">7:12 PM</td>
+                <td>4:31 AM</td>
+            </tr>
+            <tr class="pure-table-odd">
+                <td>22</td>
+                <td>28</td>
+                <td id="may-22">7:12 PM</td>
+                <td>4:31 AM</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>29</td>
+                <td id="may-23">7:13 PM</td>
+                <td>4:31 AM</td>
+            </tr>
+            <tr class="pure-table-odd" id="may-24">
+                <td>24</td>
+                <td>30</td>
+                <td id="may-24">7:13 PM</td>
+                <td>4:30 AM</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" class="dua"><b>Niyat for Saheri</b> <br> Navaitu an asuma gadala lilaahi ta aalla min
+                    fardi ramadan</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="dua"><b>Iftar Dua</b> <br> Allahumma inni laka sumtu wa bika aamantu wa
+                    'alayka tawakkaltu wa 'ala rizq-ika aftarthu fathakabl minni</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <!--   <script src="app.js"></script> -->
+    <footer class="footer">Made with Imaan and Akida By Shahid Dhariwala &#x1F499;</footer>
+    <script>
+        let today = "may-"+new Date().getDate();
+        console.log(today);
+        let query = document.getElementById(today).textContent;
+        let todayhr = query.split(":")[0];
+        let todaymin = query.split(":")[1].split(" ")[0];
+        let deadString = `may ${today}, 2020 ${parseInt(todayhr)+12}:${todaymin}:00`;
+        var deadline = new Date(deadString).getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("hour").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("second").innerHTML = seconds;
+            if (t < 0) {
+                clearInterval(x);
+                document.getElementById("alertHead").innerHTML = "Break Fast";
+                document.getElementById("hour").innerHTML = '0';
+                document.getElementById("minute").innerHTML = '0';
+                document.getElementById("second").innerHTML = '0';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
